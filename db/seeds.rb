@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+greetings = [
+  { text: 'Hello There' },
+  { text: 'Hola' },
+  { text: 'Bonjour' },
+  { text: 'Hallo' },
+  { text: 'こんにちは (Konnichiwa)' },
+  { text: 'Привет (Privet)' }
+]
+
+greetings.each do |greeting|
+  Message.create(text: greeting[:text])
+end
