@@ -1,11 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Greeting from './Greeting';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import Greetings from './Greetings';
 
-const App = () => {
+function App() {
   return (
-      <Greeting />
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Greetings />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
